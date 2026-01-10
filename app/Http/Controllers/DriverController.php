@@ -9,9 +9,13 @@ use App\Models\Ride;
 class DriverController extends Controller
 {
     public function updateLocation(Request $request) {
-        Driver::where('id',$request->driver_id)
+       $updated= Driver::where('id',$request->driver_id)
         ->update(['latitude'=>$request->lat,'longitude'=>$request->lng]);
-        return response()->json(['message'=>'Location updated']);
+        // return response()->json(['message'=>'Location updated']);
+        return response()->json([
+        'updated_rows' => $updated,
+        'message' => 'Location updated'
+    ]);
     }
 
 

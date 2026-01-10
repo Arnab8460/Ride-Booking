@@ -86,9 +86,13 @@
                             <div class="status-box status-pending mt-1">
                                 <i class="bi bi-hourglass-split"></i> Pending Approval
                             </div>
-                        @else
-                            <div class="status-box status-cancelled mt-1">
-                                <i class="bi bi-x-circle-fill"></i> Cancelled
+                        @elseif($ride->driver_completed == 1)
+                            <div class="status-box status-pending mt-1">
+                                <i class="bi bi-x-circle-fill"></i>Only Driver Completed
+                            </div>
+                        @elseif($ride->passenger_completed == 1)
+                            <div class="status-box status-pending mt-1">
+                                <i class="bi bi-x-circle-fill"></i>Only Passenger Completed                           
                             </div>
                         @endif
                     </div>
