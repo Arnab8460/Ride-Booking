@@ -52,6 +52,7 @@ It provides REST APIs for a simple ride-booking flow used by a mobile app and a 
 
 ```bash
 git clone <your-github-repo-url>
+https://github.com/Arnab8460/Ride-Booking.git
 cd ride-booking-api
 ```
 
